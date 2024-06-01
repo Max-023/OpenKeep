@@ -1032,6 +1032,10 @@
 	icon_state = "weird1"
 	},
 /area/rogue/indoors/town)
+"bER" = (
+/obj/machinery/light/rogue/wallfire/candle/l,
+/turf/open/transparent/openspace,
+/area/rogue/indoors/town)
 "bFc" = (
 /obj/structure/closet/crate/coffin,
 /obj/structure/fluff/walldeco/maidendrape,
@@ -1635,6 +1639,7 @@
 "czg" = (
 /obj/structure/bed/rogue/inn/hay,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/rogue/wallfire/candle,
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/town)
 "czv" = (
@@ -8746,6 +8751,11 @@
 /obj/machinery/light/rogue/torchholder/r,
 /turf/open/floor/rogue/carpet/lord/right,
 /area/rogue/indoors/town/manor)
+"nab" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/rogue/wallfire/candle/l,
+/turf/open/floor/rogue/twig,
+/area/rogue/indoors/town)
 "naf" = (
 /obj/item/chair/stool/bar/rogue,
 /turf/open/floor/rogue/dirt,
@@ -13430,6 +13440,7 @@
 /obj/structure/bed/rogue/inn/hay,
 /obj/effect/landmark/start/villager,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/rogue/wallfire/candle,
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/town)
 "uat" = (
@@ -79261,9 +79272,9 @@ oiP
 oiP
 luz
 oFD
-qlQ
+nab
 gxy
-ees
+gCb
 uII
 doW
 doW
@@ -80517,7 +80528,7 @@ oiP
 oiP
 oiP
 luz
-ixF
+bER
 ixF
 qvz
 oSt
@@ -81146,7 +81157,7 @@ oiP
 oiP
 luz
 uaf
-qlQ
+mvC
 ees
 oSt
 doW
