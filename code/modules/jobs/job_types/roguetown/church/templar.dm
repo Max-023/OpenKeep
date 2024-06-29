@@ -1,5 +1,8 @@
-/datum/advclass/crusader
-	name = "Crusader"
+/datum/job/roguetown/crusader
+	title = "Templar"
+	flag = MONK
+	department_flag = CHURCHMEN
+	faction = "Station"
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list(
 		"Humen",
@@ -8,26 +11,29 @@
 		"Dwarf",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/crusader
-	maximum_possible_slots = 2
+	outfit = /datum/outfit/job/roguetown/crusader
+	total_positions = 2
+	spawn_positions = 2
 	tutorial = "The crusaders... Knights who have pledged \
 	their wealth and lands to the church, taking up the banner \
 	of one of the rival Orders dedicated to retaking the holy land. \
 	The 451st crusade is sure to be the last."
+	allowed_patrons = list(/datum/patron/divine/astrata)
+	display_order = JDO_TEMPLAR
+	give_bank_account = TRUE
+	bypass_lastclass = TRUE
 
-	category_tags = list(CTAG_DISABLED)
-
-/datum/outfit/job/roguetown/adventurer/crusader
+/datum/outfit/job/roguetown/crusader
 	name = "Crusader"
 
-/datum/outfit/job/roguetown/adventurer/crusader/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/crusader/pre_equip(mob/living/carbon/human/H)
 	..()
 
 	belt = /obj/item/storage/belt/rogue/leather/plaquegold
 	pants = /obj/item/clothing/under/roguetown/chainlegs
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
-	armor = /obj/item/clothing/cloak/stabard/crusader
+	armor = /obj/item/clothing/cloak/tabard/crusader
 	cloak = /obj/item/clothing/cloak/cape/crusader
 	gloves = /obj/item/clothing/gloves/roguetown/chain
 	backr = /obj/item/rogueweapon/shield/tower/metal
@@ -55,21 +61,9 @@
 	H.change_stat("intelligence", -1)
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 
-	for(var/I in SSrole_class_handler.sorted_class_categories[CTAG_ALLCLASS])
-		var/datum/advclass/A = I
-		if(A.name == name)
-			if(A.total_slots_occupied > 1)
-				armor = /obj/item/clothing/cloak/stabard/crusader/t
-				cloak = /obj/item/clothing/cloak/raincloak/furcloak
-				beltl = /obj/item/clothing/head/roguetown/helmet/heavy/crusader/t
-				neck = /obj/item/clothing/neck/roguetown/psicross
-				beltr = /obj/item/rogueweapon/sword/sabre
-				belt = /obj/item/storage/belt/rogue/leather/plaquesilver
-
 	if(H.gender == FEMALE)
 		backl = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
-		backr = /obj/item/storage/backpack/rogue/satchel
-		beltr = /obj/item/quiver/bolts
+		backr = /obj/item/quiver/bolts
 		gloves = /obj/item/clothing/gloves/roguetown/chain
 		shoes = /obj/item/clothing/shoes/roguetown/boots/armor
 		backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/silver = 1, /obj/item/storage/belt/rogue/pouch/coins/rich=1)

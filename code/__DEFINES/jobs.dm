@@ -116,8 +116,10 @@
 
 #define PRIEST		(1<<0)
 #define CLERIC		(1<<1)
-#define PURITAN		(1<<2)
-#define MONK		(1<<3)
+#define HOSPITALLER	(1<<2)
+#define PURITAN		(1<<3)
+#define MONK		(1<<4)
+#define TEMPLAR		(1<<5)
 
 #define SERFS			(1<<3)
 
@@ -182,7 +184,9 @@
 
 #define JDO_PRIEST 12
 #define JDO_CLERIC 13
+#define JDO_HOSPITALLER 13.1
 #define JDO_MONK 14
+#define JDO_TEMPLAR 14.1
 #define JDO_CHURCHLING 15
 
 #define JDO_PURITAN 16

@@ -81,7 +81,9 @@ GLOBAL_LIST_INIT(garrison_positions, list(
 GLOBAL_LIST_INIT(church_positions, list(
 	"Priest",
 	"Cleric",
+	"Hospitaller",
 	"Acolyte",
+	"Templar",
 	"Witch Hunter",
 	"Confessor"
 	))
